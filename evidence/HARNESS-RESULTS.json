@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-10-18T13:27:02.979Z",
+  "claude": {
+    "version": "2.1.248",
+    "model": "deepseek-v4.1-flash",
+    "provider": "OpenCode Go via existing local route",
+    "launch": "Native Claude executable, isolated keyless MCP config using the registered stable entry",
+    "completed": true,
+    "calls": [
+      {
+        "id": "call_00_0w5mn3uqGibUAsIVZrMz5785",
+        "name": "mcp__deepseek-search__deepseek_search",
+        "arguments": {
+          "query": "site:api-docs.deepseek.com",
+          "need_content": true,
+          "count": 1,
+          "request_budget": 1
+        },
+        "isError": false,
+        "results": [
+          {
+            "title": "DeepSeek-V4 预览版：迈入百万上下文普惠时代 | DeepSeek API Docs - DeepSeek-V4 预览版：迈入百万上下文普惠时代",
+            "url": "https://api-docs.deepseek.com/zh-cn/news/news260424/",
+            "truncated": false,
+            "original_length": 3729
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 604,
+          "api_requests": 1,
+          "cache_hits": 0,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 0,
+          "request_budget": 1
+        }
+      },
+      {
+        "id": "call_00_lglgLHbGIh60s6fBMU5s4030",
+        "name": "mcp__deepseek-search__deepseek_extract",
+        "arguments": {
+          "urls": [
+            "https://api-docs.deepseek.com/zh-cn/api/search/"
+          ],
+          "query": "need_content count",
+          "max_characters": 3000,
+          "chunks_per_source": 3,
+          "request_budget": 1
+        },
+        "isError": false,
+        "results": [
+          {
+            "title": "https://api.deepseek.com/v1/tools/search",
+            "url": "https://api-docs.deepseek.com/zh-cn/api/search/",
+            "truncated": true,
+            "original_length": 3066
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 13,
+          "api_requests": 0,
+          "cache_hits": 1,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 0,
+          "request_budget": 1
+        }
+      }
+    ]
+  },
+  "codex": {
+    "version": "0.162.1",
+    "launch": "Native codex exec using installed user MCP registration",
+    "completed": true,
+    "calls": [
+      {
+        "name": "deepseek_search",
+        "arguments": {
+          "query": "site:api-docs.deepseek.com",
+          "count": 1,
+          "need_content": true,
+          "request_budget": 1
+        },
+        "status": "completed",
+        "error": null,
+        "results": [
+          {
+            "title": "DeepSeek-V4 预览版：迈入百万上下文普惠时代 | DeepSeek API Docs - DeepSeek-V4 预览版：迈入百万上下文普惠时代",
+            "url": "https://api-docs.deepseek.com/zh-cn/news/news260424/",
+            "truncated": false,
+            "original_length": 3729
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 20,
+          "api_requests": 0,
+          "cache_hits": 1,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 0,
+          "request_budget": 1
+        }
+      },
+      {
+        "name": "deepseek_extract",
+        "arguments": {
+          "urls": [
+            "https://api-docs.deepseek.com/zh-cn/api/search/"
+          ],
+          "query": "need_content count",
+          "max_characters": 3000,
+          "chunks_per_source": 3,
+          "request_budget": 1
+        },
+        "status": "completed",
+        "error": null,
+        "results": [
+          {
+            "title": "https://api.deepseek.com/v1/tools/search",
+            "url": "https://api-docs.deepseek.com/zh-cn/api/search/",
+            "truncated": true,
+            "original_length": 3066
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 20,
+          "api_requests": 0,
+          "cache_hits": 1,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 0,
+          "request_budget": 1
+        }
+      }
+    ]
+  },
+  "notes": [
+    "Codex calls were cache hits; fresh API requests are independently recorded in LIVE-RESULTS.json and DOCTOR-RESULTS.json.",
+    "Unrelated pre-existing MCP servers emitted authentication/startup warnings in Codex stderr; deepseek-search calls completed successfully."
+  ]
+}

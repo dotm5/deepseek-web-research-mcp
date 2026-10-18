@@ -1,0 +1,345 @@
+{
+  "timestamp": "2026-10-18T14:31:02.899Z",
+  "version": "0.4.1",
+  "actual_models": [
+    "deepseek-v4.1-flash"
+  ],
+  "entry": "<data-dir>\\runtime\\node_modules\\deepseek-search-mcp\\dist\\cli.js",
+  "entry_sha256": "1a2c612d0047f2e4b813a78ac229da270e6c74bb36261668a174392b6bf51903",
+  "scope": "Final native Claude Code/DeepSeek retest after limiter, DoH fallback, response sizing and Markdown escape repairs. Earlier full workflow/cancel/proxy tests are in ADVANCED reports. Research reads previously collected evidence; its historical partial 404 remains visible.",
+  "checks": [
+    {
+      "name": "Model completed all three calls without tool errors",
+      "passed": true
+    },
+    {
+      "name": "Map discovers beyond seed through verified public IPs with zero failures",
+      "passed": true
+    },
+    {
+      "name": "Code citation has a complete TypeScript block and normal package quotes",
+      "passed": true
+    },
+    {
+      "name": "Research paged S3 citation matches collected search provenance",
+      "passed": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "call_00_Ido4IeQz2EWgcsvysVfp6199",
+      "name": "deepseek_map",
+      "arguments": {
+        "url": "https://modelcontextprotocol.io/",
+        "max_depth": 1,
+        "limit": 3,
+        "request_budget": 2,
+        "max_duration_seconds": 20
+      },
+      "is_error": false,
+      "result": {
+        "results": [
+          {
+            "url": "https://modelcontextprotocol.io/",
+            "depth": 0,
+            "source": "seed"
+          },
+          {
+            "url": "https://modelcontextprotocol.io/examples",
+            "depth": 1,
+            "source": "discovery"
+          },
+          {
+            "url": "https://modelcontextprotocol.io/seps",
+            "depth": 1,
+            "source": "discovery"
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 8442,
+          "api_requests": 1,
+          "cache_hits": 0,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 2,
+          "request_budget": 2,
+          "queued_urls": 3,
+          "robots_checked": true,
+          "network": {
+            "proxy": "http://127.0.0.1:7897",
+            "dns": "auto",
+            "doh_queries": 2,
+            "pinned_requests": 2,
+            "public_ip_pinning": true
+          }
+        }
+      }
+    },
+    {
+      "id": "call_01_Lg1AB96FbV852lpAWMaS0051",
+      "name": "deepseek_code_context",
+      "arguments": {
+        "query": "McpServer StdioServerTransport example",
+        "language": "typescript",
+        "repo": "modelcontextprotocol/typescript-sdk",
+        "library": "@modelcontextprotocol/server",
+        "max_results": 3,
+        "max_characters": 12000,
+        "request_budget": 4
+      },
+      "is_error": false,
+      "result": {
+        "results": [
+          {
+            "title": "typescript-sdk/README.md at main · modelcontextprotocol/typescript-sdk · GitHub",
+            "url": "https://github.com/modelcontextprotocol/typescript-sdk/blob/main/README.md?plain=1",
+            "snippet": "The Model Context Protocol (MCP) allows applications to provide context for LLMs in a standardized way ... This repository contains the TypeScript SDK implementation of the MCP specification. It runs on **Node.js**, **Bun**, and **Deno**, and ships ... Issues and pull requests are welcome on GitHub at <https://github.com/modelcontextprotocol/typescript-sdk>.",
+            "content": "## Getting Started\n\n```typescript\nimport { McpServer } from '@modelcontextprotocol/server';\nimport { StdioServerTransport } from '@modelcontextprotocol/server/stdio';\nimport * as z from 'zod/v4';\n\nconst server = new McpServer({ name: 'greeting-server', version: '1.0.0' });\n\nserver.registerTool(\n    'greet',\n    {\n        description: 'Greet someone by name',\n        inputSchema: z.object({ name: z.string() })\n    },\n    async ({ name }) => ({\n        content: [{ type: 'text', text: `Hello, ${name}!` }]\n    })\n);\n\nasync function main() {\n    const transport = new StdioServerTransport();\n    await server.connect(transport);\n}\n\nmain();\n```\n\n## Getting Started\n\n- [`examples/README.md`](examples/README.md) — runnable, self-verifying client/server example pairs (one story per directory)\n\n## Getting Started\n\nHere is what an MCP server looks like. This minimal example exposes a single `greet` tool over stdio:\n\n### Server\n\n```bash\nnpm install @modelcontextprotocol/server\n# or\nbun add @modelcontextprotocol/server\n# or\ndeno add npm:@modelcontextprotocol/server\n```\n\n# MCP TypeScript SDK\n\n[![NPM Version - Server](https://img.shields.io/npm/v/%40modelcontextprotocol%2Fserver?label=%40modelcontextprotocol%2Fserver)](https://www.npmjs.com/package/@modelcontextprotocol/server)\n[![NPM Version - Client](https://img.shields.io/npm/v/%40modelcontextprotocol%2Fclient?label=%40modelcontextprotocol%2Fclient)](https://www.npmjs.com/package/@modelcontextprotocol/client) ![Apache-2.0 licensed](https://img.shields.io/npm/l/%40modelcontextprotocol%2Fserver)\n\n## Packages\n\n- **`@modelcontextprotocol/server`**: build MCP servers\n- **`@modelcontextprotocol/client`**: build MCP clients\n\n# MCP TypeScript SDK\n\n<!-- prettier-ignore -->\n> [!IMPORTANT]\n> **This is the `main` branch: v2 of the SDK** (`@modelcontextprotocol/server`, `@modelcontextprotocol/client`), the stable release line, implementing the [2026-07-28 MCP spec](https://modelcontextprotocol.io/specification/2026-07-28). Start with the [v2 documentation](https://ts.sdk.modelcontextprotocol.io/v2/); coming from v1, see the [migration guide](https://ts.sdk.modelcontextprotocol.io/v2/migration/upgrade-to-v2).\n>\n> **v1.x** (`@modelcontextprotocol/sdk`) lives on the [`v1.x` branch](https://github.com/modelcontextprotocol/typescript-sdk/tree/v1.x) and continues to receive bug fixes and security updates for at least six months after the v2 release (2026-07-27). Its documentation is at [ts.sdk.modelcontextprotocol.io](https://ts.sdk.modelcontextprotocol.io/).\n>\n> Found a problem in v2? [Open an issue](https://github.com/modelcontextprotocol/typescript-sdk/issues/new?template=v2-feedback.yml).\n\n## Overview\n\n- MCP **server** libraries (tools/resources/prompts, Streamable HTTP, stdio, auth helpers)\n- MCP **client** libraries (transports, high-level helpers, OAuth helpers)\n- Optional **middleware packages** for specific runtimes/frameworks (Express, Fastify, Hono, Node.js HTTP)\n- Runnable **examples** (under [`examples/`](https://github.com/modelcontextprotocol/typescript-sdk/tree/main/examples))",
+            "provider_score": 2.0248324871063232,
+            "rerank_score": 2.0248324871063232,
+            "authority": 3,
+            "published_at": "2026-07-26T16:00:00+00:00",
+            "date": "2026-07-26T16:00:00+00:00",
+            "fetched_at": "2026-10-18T14:17:29.151Z",
+            "truncated": true,
+            "original_length": 9333,
+            "source_queries": [
+              "modelcontextprotocol/typescript-sdk site:github.com"
+            ],
+            "chunks": [
+              {
+                "index": 21,
+                "score": 13.323691110281894
+              },
+              {
+                "index": 25,
+                "score": 4.110184714326539
+              },
+              {
+                "index": 20,
+                "score": 4.051198250922094
+              },
+              {
+                "index": 15,
+                "score": 3.5124164189949827
+              },
+              {
+                "index": 2,
+                "score": 3.0355393963828803
+              },
+              {
+                "index": 10,
+                "score": 2.9509126044191363
+              },
+              {
+                "index": 0,
+                "score": 2.788936645983178
+              },
+              {
+                "index": 8,
+                "score": 2.553922316684198
+              }
+            ],
+            "citation_id": "C1",
+            "versions": [
+              "1.0.0",
+              "2.0"
+            ]
+          }
+        ],
+        "search_results": [
+          {
+            "title": "typescript-sdk/README.md at main · modelcontextprotocol/typescript-sdk · GitHub - MCP TypeScript SDK",
+            "url": "https://github.com/modelcontextprotocol/typescript-sdk/blob/main/README.md?plain=1",
+            "snippet": "The Model Context Protocol (MCP) allows applications to provide context for LLMs in a standardized way ... This repository contains the TypeScript SDK implementation of the MCP specification. It runs on **Node.js**, **Bun**, and **Deno**, and ships ... Issues and pull requests are welcome on GitHub at <https://github.com/modelcontextprotocol/typescript-sdk>.",
+            "provider_score": 2.0248324871063232,
+            "rerank_score": 2.0248324871063232,
+            "authority": 3,
+            "published_at": "2026-07-26T16:00:00+00:00",
+            "date": "2026-07-26T16:00:00+00:00",
+            "fetched_at": "2026-10-18T14:25:06.167Z",
+            "truncated": false,
+            "original_length": 8278,
+            "source_queries": [
+              "modelcontextprotocol/typescript-sdk site:github.com"
+            ]
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 890,
+          "api_requests": 2,
+          "cache_hits": 1,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 0,
+          "request_budget": 4,
+          "body_character_budget": 12000
+        }
+      }
+    },
+    {
+      "id": "call_02_16E5HKJ8TmTRUbmFdd778803",
+      "name": "deepseek_research_status",
+      "arguments": {
+        "id": "10bed521-ddc2-4a8a-a6a2-1947f712c5a4",
+        "offset": 2,
+        "limit": 1,
+        "max_characters": 2000
+      },
+      "is_error": false,
+      "result": {
+        "id": "10bed521-ddc2-4a8a-a6a2-1947f712c5a4",
+        "state": "completed",
+        "payload": {
+          "query": "Node.js SQLite DatabaseSync prepared statements example",
+          "additional_queries": [
+            "site:nodejs.org DatabaseSync prepare SQLite"
+          ],
+          "request_budget": 8
+        },
+        "result": {
+          "query": "Node.js SQLite DatabaseSync prepared statements example",
+          "subqueries": [
+            "site:nodejs.org DatabaseSync prepare SQLite"
+          ],
+          "query_plan": {
+            "queries": [
+              "Node.js SQLite DatabaseSync prepared statements example",
+              "site:nodejs.org DatabaseSync prepare SQLite"
+            ],
+            "omitted_queries": [],
+            "split_semantics": "Union of bounded subqueries; not an exact conjunction of all terms."
+          },
+          "evidence": [
+            {
+              "title": "Type conversion between JavaScript and SQLite #",
+              "url": "https://nodejs.org/download/release/v24.20.0/docs/api/sqlite.html",
+              "snippet": "Returns ... const insert = sourceDb.prepare('INSERT INTO data (key, value) VALUES (?, ... This class represents a single prepared statement. ... instances are created via thedatabase.prepare() method. ... A prepared statement ... values inn",
+              "provider_score": 2.320354461669922,
+              "rerank_score": 2.320354461669922,
+              "authority": 3,
+              "published_at": null,
+              "date": null,
+              "fetched_at": "2026-10-18T14:04:58.471Z",
+              "truncated": true,
+              "original_length": 51997,
+              "source_queries": [
+                "Node.js SQLite DatabaseSync prepared statements example",
+                "site:nodejs.org DatabaseSync prepare SQLite"
+              ],
+              "citation_id": "S3",
+              "content": "## SQLite#\n\nThe following example shows the basic usage of thenode\\:sqlite module to open\nan in-memory database\\, write data to the database\\, and then read the data back.\nimport { DatabaseSync } from \\'node\\:sqlite\\'\\;\nconst database \\= new DatabaseSync(\\'\\:memory\\:\\')\\;\n\n#### database.createTagStore([maxSize])#\n\nTagged statements bind the placeholder values from the template literal as parameters to the underlying prepared statement. For example\\:\nsqlTagStore.get`SELECT \\${value}`\\;\nis equivalent to\\:\ndb.prepare(\\'SELECT \\?\\').get(value)\\;\nHowever\\, in the first example\\, the tag store will cache the underlying prepared statement for future use.\n\n## SQLite#\n\nSource Code\\: lib\\/sqlite.js\n\n#### database.deserialize(buffer[\\, options])#\n\nLoads a serialized database into this connection\\, replacing the current database. The deserialized database is writable. Existing prepared statements are finalized before deserialization is attempted\\, even if the operation subsequently fails. This method is a wrapper aroundsqlite3_deserialize().\nimport { DatabaseSync } from \\'node\\:sqlite\\'\\;\n\n### Type conversion between JavaScript and SQLite#\n\nAPIs that read values from SQLite have a configuration option that determines whetherINTEGER values are converted to number or bigint in JavaScript\\,\nsuch as the readBigInts option for statements and the useBigIntArguments\noption for user-defined functions. If Node.js reads an INTEGER value from\nSQLite that is outside the JavaScript safe integer range\\, and the option to\nread BigInts is not enabled\\, then an ERR_OUT_OF_RANGE error will be thrown.\n\n#### database.setAuthorizer(callback)#\n\nconst { DatabaseSync\\, constants } \\= require(\\'node\\:sqlite\\')\\;\nconst db \\= new DatabaseSync(\\'\\:memory\\:\\')\\;",
+              "view_truncated": false,
+              "evidence_length": 1751,
+              "returned_characters": 1751
+            }
+          ],
+          "search_results": [
+            {
+              "title": "Node.js v24.0.0-nightly202412261d1d8f2df3 documentation",
+              "url": "https://nodejs.org/download/nightly/v24.0.0-nightly202412261d1d8f2df3/docs/api/sqlite.html",
+              "provider_score": 2.476604461669922,
+              "authority": 3,
+              "published_at": null
+            },
+            {
+              "title": "Node.js v24.0.0-v8-canary202412116884e26428 documentation",
+              "url": "https://nodejs.org/download/v8-canary/v24.0.0-v8-canary202412116884e26428/docs/api/sqlite.html",
+              "provider_score": 2.476604461669922,
+              "authority": 3,
+              "published_at": null
+            },
+            {
+              "title": "Type conversion between JavaScript and SQLite #",
+              "url": "https://nodejs.org/download/release/v24.20.0/docs/api/sqlite.html",
+              "provider_score": 2.320354461669922,
+              "authority": 3,
+              "published_at": null
+            },
+            {
+              "title": "Working with Data",
+              "url": "https://photostructure.github.io/node-sqlite/documents/working-with-data.html",
+              "provider_score": 2.289104461669922,
+              "authority": 3,
+              "published_at": null
+            },
+            {
+              "title": "node/doc/api/sqlite.md at 7beb6fac0e907292432f4d729f8e78b218491f43 · pawanguptagqq01-hub/node",
+              "url": "https://github.com/pawanguptagqq01-hub/node/blob/7beb6fac0e907292432f4d729f8e78b218491f43/doc/api/sqlite.md",
+              "provider_score": 2.257854461669922,
+              "authority": 3,
+              "published_at": "2025-09-30T16:00:00+00:00"
+            },
+            {
+              "title": "Node.js v25.6.1-nightly20260208fbc836ecd3 documentation",
+              "url": "https://nodejs.org/download/nightly/v25.6.1-nightly20260208fbc836ecd3/docs/api/sqlite.html",
+              "provider_score": 2.210979461669922,
+              "authority": 3,
+              "published_at": "2026-02-07T16:00:00+00:00"
+            },
+            {
+              "title": "sqlite 轻型数据库",
+              "url": "https://url.nodejs.cn/api/v25/sqlite.html",
+              "provider_score": 2.195354461669922,
+              "authority": 3,
+              "published_at": null
+            },
+            {
+              "title": "Node.js v23.0.0-v8-canary20240729cdf750cb34 documentation",
+              "url": "http://dist-worker-prod.nodejs.workers.dev/download/v8-canary/v23.0.0-v8-canary20240729cdf750cb34/docs/api/sqlite.html",
+              "provider_score": 2.148479461669922,
+              "authority": 3,
+              "published_at": "2024-07-28T16:00:00+00:00"
+            },
+            {
+              "title": "Using SQL `IN` operator with DatabaseSync in Node (sqlite) - Using SQL `IN` operator with DatabaseSync in Node (sqlite) - Stack Overflowmost recent 30 from stackoverflow",
+              "url": "https://stackoverflow.com/feeds/question/79441096",
+              "provider_score": 2.132854461669922,
+              "authority": 3,
+              "published_at": null
+            },
+            {
+              "title": "Node.js v24.0.0-v8-canary2024122520cbd5070c documentation",
+              "url": "https://nodejs.org/download/v8-canary/v24.0.0-v8-canary2024122520cbd5070c/docs/api/sqlite.html",
+              "provider_score": 2.101604461669922,
+              "authority": 3,
+              "published_at": null
+            }
+          ],
+          "failed_results": [
+            {
+              "url": "https://photostructure.github.io/node-sqlite/documents/working-with-data.html",
+              "error": {
+                "code": "DEEPSEEK_HTTP_ERROR",
+                "message": "DeepSeek fetch returned HTTP 404",
+                "status": 404,
+                "retryable": false
+              }
+            }
+          ],
+          "meta": {
+            "elapsed_ms": 4758,
+            "api_requests": 4,
+            "cache_hits": 3,
+            "coalesced_hits": 0,
+            "failures": 1,
+            "local_requests": 0,
+            "request_budget": 8
+          },
+          "pagination": {
+            "total_sources": 4,
+            "offset": 2,
+            "limit": 1,
+            "returned_sources": 1,
+            "has_more": true
+          }
+        },
+        "error": null,
+        "updated": 1792332298560
+      }
+    }
+  ],
+  "model_report": "1. **map ✅** — 3 results: seed (`https://modelcontextprotocol.io/`) + depth-1 discovery (`/examples`, `/seps`); 1 API request, 2 local, 0 failures, 8442 ms.\n2. **map metadata ✅** — `proxy: http://127.0.0.1:7897`, `dns: auto`, `doh_queries: 2`, `pinned_requests: 2`, `public_ip_pinning: true`.\n3. **code_context ✅** — C1 = `https://github.com/modelcontextprotocol/typescript-sdk/blob/main/README.md?plain=1`; TypeScript block intact with normal `'@modelcontextprotocol/server'`, `@modelcontextprotocol/server/stdio`, and `${name}` (no escaped quotes/slashes); 0 failures.\n4. **code_context meta ⚠️** — 2 API requests, 1 cache hit, budget 4; result `truncated: true` (9333 → shown excerpt), versions `1.0.0`, `2.0`.\n5. **research_status ✅** — completed; S3 directly returned at offset 2/limit 1, exactly matching `search_results[2]`: `https://nodejs.org/download/release/v24.20.0/docs/api/sqlite.html` (document v24.20.0, not “latest”); pagination 4 sources, `has_more: true`.\n6. **partial failure ℹ️** — status call reports one 404: `https://photostructure.github.io/node-sqlite/documents/working-with-data.html`; all three target calls otherwise succeeded."
+}

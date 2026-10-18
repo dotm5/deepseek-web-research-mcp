@@ -1,0 +1,58 @@
+{
+  "name": "deepseek-web-research-mcp",
+  "version": "0.4.1",
+  "description": "DeepSeek Web Research MCP with system credential vault and keyless agent setup",
+  "repository": { "type": "git", "url": "git+https://github.com/dotm5/deepseek-web-research-mcp.git" },
+  "homepage": "https://github.com/dotm5/deepseek-web-research-mcp#readme",
+  "bugs": { "url": "https://github.com/dotm5/deepseek-web-research-mcp/issues" },
+  "license": "MIT",
+  "keywords": ["mcp", "deepseek", "search", "fetch", "claude-code", "codex", "research"],
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" },
+  "type": "module",
+  "bin": {
+    "deepseek-web-research-mcp": "dist/cli.js"
+  },
+  "files": [
+    "dist/cli.js",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "npm-shrinkwrap.json"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build",
+    "smoke": "node scripts/smoke.mjs",
+    "check:package": "node scripts/check-package.mjs",
+    "test:install": "node scripts/install-smoke.mjs",
+    "check": "node tools/check-links.mjs && node tools/check-docs.mjs",
+    "check:docs": "npm run check",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "release:check": "npm run typecheck && npm test && npm run build && npm run check:package && npm run check && npm run check:secrets && npm run smoke"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "fast-xml-parser": "5.11.2",
+    "ipaddr.js": "2.5.0",
+    "robots-parser": "3.0.1",
+    "smol-toml": "1.9.1",
+    "socks": "2.8.10",
+    "undici": "8.12.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@types/node": "24.19.2",
+    "ajv": "8.20.0",
+    "esbuild": "0.28.2",
+    "tsup": "9.0.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}

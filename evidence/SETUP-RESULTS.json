@@ -1,0 +1,37 @@
+{
+  "entry": "<data-dir>\\runtime\\node_modules\\deepseek-search-mcp\\dist\\cli.js",
+  "registrations": [
+    {
+      "harness": "claude",
+      "config": "<home>\\.claude.json",
+      "command": [
+        "<claude>",
+        "mcp",
+        "add",
+        "--scope",
+        "user",
+        "deepseek-search",
+        "--",
+        "node",
+        "<data-dir>\\runtime\\node_modules\\deepseek-search-mcp\\dist\\cli.js"
+      ],
+      "backup": "<data-dir>\\backups\\claude-1792330183389-4e990b4eaea02.bak",
+      "status": "registered-native-cli"
+    },
+    {
+      "harness": "codex",
+      "config": "<home>\\.codex\\config.toml",
+      "command": [
+        "<codex>",
+        "mcp",
+        "add",
+        "deepseek-search",
+        "--",
+        "node",
+        "<data-dir>\\runtime\\node_modules\\deepseek-search-mcp\\dist\\cli.js"
+      ],
+      "backup": "<data-dir>\\backups\\codex-1792330185745-c0d230c228566.bak",
+      "status": "registered-native-cli"
+    }
+  ]
+}

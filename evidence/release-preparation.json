@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-10-18T14:49:07.676Z",
+  "package": "deepseek-web-research-mcp",
+  "version": "0.4.1",
+  "license": "MIT",
+  "published": false,
+  "github_remote_created": false,
+  "unit": {
+    "passed": 29,
+    "failed": 0,
+    "opt_in_network_skipped": 1
+  },
+  "schemas": {
+    "nodes": [
+      "v24.13.1",
+      "v24.22.0"
+    ],
+    "default_tools": 3,
+    "all_tools": 10,
+    "schemas_valid": true,
+    "invalid_arguments_rejected": true
+  },
+  "final_install": {
+    "version": "0.4.1",
+    "platform": "win32",
+    "node": "v24.13.1",
+    "live": true,
+    "api_requests": 2,
+    "cli_sha256": "49e8399c35c22516b0c0476aedc8c39d2e6d8d14930a95d465e8d7789cd730cc",
+    "package_audit": {
+      "version": "0.4.1",
+      "name": "deepseek-web-research-mcp",
+      "files": [
+        "LICENSE",
+        "dist/cli.js",
+        "npm-shrinkwrap.json",
+        "package.json",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "runtime_install_scripts": false,
+      "local_path_dependencies": false,
+      "embedded_credentials": false
+    },
+    "checks": [
+      {
+        "name": "npx installed the expected package version",
+        "passed": true
+      },
+      {
+        "name": "fresh profile has no credential",
+        "passed": true
+      },
+      {
+        "name": "empty stdin and key-in-argv login are rejected",
+        "passed": true
+      },
+      {
+        "name": "live npx auth login validates and saves in OS vault",
+        "passed": true
+      },
+      {
+        "name": "npx auth status reads credential across processes",
+        "passed": true
+      },
+      {
+        "name": "setup dry-run detects isolated Claude and Codex",
+        "passed": true
+      },
+      {
+        "name": "setup uses both native CLI management interfaces",
+        "passed": true
+      },
+      {
+        "name": "managed runtime is outside npx cache",
+        "passed": true
+      },
+      {
+        "name": "setup preserves unrelated Claude settings",
+        "passed": true
+      },
+      {
+        "name": "registration contains only command and args",
+        "passed": true
+      },
+      {
+        "name": "doctor verifies both keyless current registrations",
+        "passed": true
+      },
+      {
+        "name": "doctor performs one successful real Search request",
+        "passed": true
+      },
+      {
+        "name": "repeat setup succeeds",
+        "passed": true
+      },
+      {
+        "name": "logout removes isolated vault credential",
+        "passed": true
+      },
+      {
+        "name": "managed MCP survives deletion of npx cache and tarball",
+        "passed": true
+      }
+    ],
+    "scope": "Real npm exec/npx install and managed MCP process; isolated stub Agent management CLIs. Live mode adds two real API calls and OS-vault login/logout. No existing user configuration is changed."
+  },
+  "native_project_setup": {
+    "claude": "registered-native-cli",
+    "codex": "registered-config-fallback",
+    "keyless": true,
+    "stable_runtime_matches_final_cli": true
+  },
+  "security": {
+    "public_files_scanned": 39,
+    "exact_vault_credential_matches": 0,
+    "npm_artifact_scanned": true,
+    "personal_path_or_local_dependency_matches": 0
+  },
+  "package_audit": {
+    "version": "0.4.1",
+    "name": "deepseek-web-research-mcp",
+    "files": [
+      "LICENSE",
+      "dist/cli.js",
+      "npm-shrinkwrap.json",
+      "package.json",
+      "CHANGELOG.md",
+      "README.md"
+    ],
+    "runtime_install_scripts": false,
+    "local_path_dependencies": false,
+    "embedded_credentials": false
+  },
+  "cli_sha256": "49e8399c35c22516b0c0476aedc8c39d2e6d8d14930a95d465e8d7789cd730cc",
+  "tarball_sha256": "b356e1026186f13b5557270024b4facc2721968cdf93950e34d0e0e9e96f105a",
+  "dependency_lock_sha256": "0981237ee6f21dcb44749895dbba2af6ab156eb510a3dc39a243eb2387743e30",
+  "npm_publish_dry_run": true,
+  "remote_ci": {
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "status": "configured_not_run"
+  }
+}

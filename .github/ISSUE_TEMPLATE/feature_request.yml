@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a scoped capability or behavior change
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the gap and the affected workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the intended behavior, parameters and output fields.
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries
+      description: List request budgets, timeouts, security constraints and failure modes.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Verification
+      description: Describe the test or measurement that confirms the change.

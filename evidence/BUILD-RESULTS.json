@@ -1,0 +1,225 @@
+{
+  "timestamp": "2026-10-18T14:31:03.204Z",
+  "version": "0.4.1",
+  "build_node": "v24.22.0",
+  "global_node": "v24.13.1",
+  "source_sha256": "1a2c612d0047f2e4b813a78ac229da270e6c74bb36261668a174392b6bf51903",
+  "installed_sha256": "1a2c612d0047f2e4b813a78ac229da270e6c74bb36261668a174392b6bf51903",
+  "runtime_matches": true,
+  "lock_sha256": "3acd7a9d88df85c5640bd3df987896f46341f33d3fc643a3068bdbf86c3decb9",
+  "tarball_sha256": "783f04ba8c848d2f033c9ea7bb5e359f133e644fd69fa2bedd9647e01c5172bd",
+  "unit": {
+    "passed": 25,
+    "failed": 0,
+    "skipped": 1
+  },
+  "network_live": "NETWORK-RESULTS.json: HTTP, SOCKS5 and direct/TUN, primary/backup DoH passed",
+  "installed_schema": {
+    "server_versions": [
+      {
+        "name": "deepseek-search-mcp",
+        "version": "0.4.1"
+      },
+      {
+        "name": "deepseek-search-mcp",
+        "version": "0.4.1"
+      }
+    ],
+    "valid_tools": 10,
+    "defaults": [
+      "deepseek_search",
+      "deepseek_fetch",
+      "deepseek_extract"
+    ],
+    "invalid_arguments_rejected": true
+  },
+  "npx": {
+    "version": "0.4.1",
+    "node": "v24.13.1",
+    "credentials": {
+      "configured": true,
+      "backend": "windows-dpapi",
+      "mask": "[redacted]"
+    },
+    "api": {
+      "skipped": true
+    },
+    "network": {
+      "proxy": "http://127.0.0.1:7897",
+      "dns": "auto"
+    },
+    "harnesses": [
+      {
+        "name": "claude",
+        "detected": true,
+        "registered": true,
+        "keyless": true,
+        "current": true,
+        "config": "<home>\\.claude.json"
+      },
+      {
+        "name": "codex",
+        "detected": true,
+        "registered": true,
+        "keyless": true,
+        "current": true,
+        "config": "<home>\\.codex\\config.toml"
+      },
+      {
+        "name": "cursor",
+        "detected": false,
+        "registered": false,
+        "keyless": false,
+        "current": false,
+        "config": "<home>\\.cursor\\mcp.json"
+      },
+      {
+        "name": "windsurf",
+        "detected": false,
+        "registered": false,
+        "keyless": false,
+        "current": false,
+        "config": "<home>\\.codeium\\windsurf\\mcp_config.json"
+      },
+      {
+        "name": "gemini",
+        "detected": true,
+        "registered": false,
+        "keyless": false,
+        "current": false,
+        "config": "<home>\\.gemini\\settings.json"
+      }
+    ]
+  },
+  "final_claude_checks": [
+    {
+      "name": "Model completed all three calls without tool errors",
+      "passed": true
+    },
+    {
+      "name": "Map discovers beyond seed through verified public IPs with zero failures",
+      "passed": true
+    },
+    {
+      "name": "Code citation has a complete TypeScript block and normal package quotes",
+      "passed": true
+    },
+    {
+      "name": "Research paged S3 citation matches collected search provenance",
+      "passed": true
+    }
+  ],
+  "advanced_checks": [
+    {
+      "mode": "AUTO",
+      "checks": [
+        {
+          "name": "Map discovers beyond seed",
+          "passed": true
+        },
+        {
+          "name": "Crawl extracts two non-empty sources",
+          "passed": true
+        },
+        {
+          "name": "deepseek_map records actual pinned requests",
+          "passed": true
+        },
+        {
+          "name": "deepseek_crawl records actual pinned requests",
+          "passed": true
+        },
+        {
+          "name": "Private seed blocked",
+          "passed": true
+        },
+        {
+          "name": "Code citation and intact language-labelled block",
+          "passed": true
+        },
+        {
+          "name": "Research evidence is directly visible without persisted output",
+          "passed": true
+        },
+        {
+          "name": "Citation provenance joins to actual search URLs",
+          "passed": true
+        },
+        {
+          "name": "Paged citation retains identity",
+          "passed": true
+        },
+        {
+          "name": "Cancel preserves completed state",
+          "passed": true
+        },
+        {
+          "name": "Running job actually cancelled and metered",
+          "passed": true
+        },
+        {
+          "name": "Zero-match failure has an explicit reason",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "mode": "SOCKS",
+      "checks": [
+        {
+          "name": "Map discovers beyond seed",
+          "passed": true
+        },
+        {
+          "name": "Crawl extracts two non-empty sources",
+          "passed": true
+        },
+        {
+          "name": "deepseek_map records actual pinned requests",
+          "passed": true
+        },
+        {
+          "name": "deepseek_crawl records actual pinned requests",
+          "passed": true
+        },
+        {
+          "name": "Private seed blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "mode": "DIRECT",
+      "checks": [
+        {
+          "name": "Map discovers beyond seed",
+          "passed": true
+        },
+        {
+          "name": "Crawl extracts two non-empty sources",
+          "passed": true
+        },
+        {
+          "name": "deepseek_map records actual pinned requests",
+          "passed": true
+        },
+        {
+          "name": "deepseek_crawl records actual pinned requests",
+          "passed": true
+        },
+        {
+          "name": "Private seed blocked",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "load": {
+    "business_calls": 270,
+    "api_attempts": 270,
+    "successes": 270,
+    "report": "LOAD-RESULTS.json",
+    "scope": "Real core client/API load with SQLite account limit shared across three processes; MCP/Claude acceptance is recorded separately."
+  },
+  "production_node_gyp_dependency": false
+}

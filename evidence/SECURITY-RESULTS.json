@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-10-18T14:31:03.203Z",
+  "scanned_files": 51,
+  "plaintext_test_key_matches": [],
+  "scope": "Exact in-memory comparison with the currently vaulted test credential across the TypeScript deliverable, excluding node_modules/.git. Credential read through DPAPI, never printed, passed in argv/env, or saved in plaintext."
+}

@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-10-18T13:22:39.879Z",
+  "node": "<node>",
+  "entry": "<project>\\dist\\cli.js",
+  "live": true,
+  "schemas": [
+    {
+      "name": "deepseek_search",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_fetch",
+      "valid": true,
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "name": "deepseek_extract",
+      "valid": true,
+      "required": [
+        "urls"
+      ]
+    },
+    {
+      "name": "deepseek_search_advanced",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_map",
+      "valid": true,
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "name": "deepseek_crawl",
+      "valid": true,
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "name": "deepseek_code_context",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_research_start",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_research_status",
+      "valid": true,
+      "required": [
+        "id"
+      ]
+    },
+    {
+      "name": "deepseek_research_cancel",
+      "valid": true,
+      "required": [
+        "id"
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "name": "deepseek_search",
+      "results": [
+        {
+          "title": "Introducing DeepSeek App | DeepSeek API Docs - Introducing DeepSeek App",
+          "url": "https://api-docs.deepseek.com/news/news250115/",
+          "content_length": 1006,
+          "truncated": true,
+          "original_length": 4150
+        },
+        {
+          "title": "DeepSeek APP | DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/zh-cn/news/news250115/",
+          "content_length": 873,
+          "truncated": false,
+          "original_length": 873
+        }
+      ],
+      "failed_results": [],
+      "meta": {
+        "elapsed_ms": 3874,
+        "api_requests": 1,
+        "cache_hits": 0,
+        "coalesced_hits": 0,
+        "failures": 0,
+        "local_requests": 0,
+        "request_budget": 2
+      }
+    },
+    {
+      "name": "deepseek_extract",
+      "results": [
+        {
+          "title": "https://api.deepseek.com/v1/tools/search",
+          "url": "https://api-docs.deepseek.com/zh-cn/api/search/",
+          "content_length": 70,
+          "truncated": true,
+          "original_length": 3066
+        },
+        {
+          "title": "https://api.deepseek.com/v1/tools/fetch",
+          "url": "https://api-docs.deepseek.com/zh-cn/api/fetch/",
+          "content_length": 325,
+          "truncated": true,
+          "original_length": 1039
+        }
+      ],
+      "failed_results": [],
+      "meta": {
+        "elapsed_ms": 1627,
+        "api_requests": 2,
+        "cache_hits": 0,
+        "coalesced_hits": 0,
+        "failures": 0,
+        "local_requests": 0,
+        "request_budget": 3
+      }
+    }
+  ],
+  "api_requests": 3,
+  "default_tools": [
+    "deepseek_search",
+    "deepseek_fetch",
+    "deepseek_extract"
+  ],
+  "invalid_arguments_rejected": true
+}

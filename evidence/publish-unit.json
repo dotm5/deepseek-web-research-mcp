@@ -1,0 +1,136 @@
+{
+  "timestamp": "2026-10-18T15:13:41.332Z",
+  "passed": 31,
+  "failed": 0,
+  "skipped": 1,
+  "tests": [
+    {
+      "name": "credential isolation authenticated encryption rejects tampering and another machine identity",
+      "status": "passed"
+    },
+    {
+      "name": "credential isolation persists the chosen fallback backend, masks and removes the secret",
+      "status": "passed"
+    },
+    {
+      "name": "credential isolation redacts known credentials, generic keys and proxy passwords",
+      "status": "passed"
+    },
+    {
+      "name": "credential isolation round-trips current-user DPAPI despite inherited PowerShell 7 module paths",
+      "status": "passed"
+    },
+    {
+      "name": "query planning and normalization splits long Unicode queries with native operators and reports budget omissions",
+      "status": "passed"
+    },
+    {
+      "name": "query planning and normalization enforces hostname boundaries and canonical URLs",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite cache and account limits shares account limits across keys while keeping cached responses isolated",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite cache and account limits never moves bucket timestamps backwards or refunds time spent waiting for a write lock",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite cache and account limits shares persistent cache and coalesces concurrent calls; refresh bypasses hits",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite cache and account limits enforces an independent token bucket shared across limiter instances",
+      "status": "passed"
+    },
+    {
+      "name": "SQLite cache and account limits retries 429 then succeeds, while 401 is not retried",
+      "status": "passed"
+    },
+    {
+      "name": "extraction and schemas decodes one provider escape layer including quotes, slash and at-sign while preserving real code escapes",
+      "status": "passed"
+    },
+    {
+      "name": "extraction and schemas isolates a failed URL and preserves a relevant complete code block",
+      "status": "passed"
+    },
+    {
+      "name": "extraction and schemas selects structural blocks without breaking code or removing underscores",
+      "status": "passed"
+    },
+    {
+      "name": "extraction and schemas publishes legal object schemas with Unicode bounds and exactly 3 defaults / 10 all",
+      "status": "passed"
+    },
+    {
+      "name": "safe discovery and configuration registers Codex in a fresh TOML config without an existing MCP table",
+      "status": "passed"
+    },
+    {
+      "name": "safe discovery and configuration fails over a transient DoH bootstrap failure without disabling public-IP checks",
+      "status": "passed"
+    },
+    {
+      "name": "safe discovery and configuration preserves original Host when connecting to a numeric address",
+      "status": "passed"
+    },
+    {
+      "name": "safe discovery and configuration rejects private, loopback, mapped-private and mixed DNS answers",
+      "status": "passed"
+    },
+    {
+      "name": "safe discovery and configuration patches only its own TOML registration without leaking a key",
+      "status": "passed"
+    },
+    {
+      "name": "pins real public IPs through HTTP proxy, SOCKS and direct/TUN with TLS validation",
+      "status": "skipped"
+    },
+    {
+      "name": "public artifact scanning rejects a provider key without logging its value",
+      "status": "passed"
+    },
+    {
+      "name": "public artifact scanning rejects raw and JSON-escaped personal paths",
+      "status": "passed"
+    },
+    {
+      "name": "public artifact scanning allows portable config examples and synthetic unit credentials",
+      "status": "passed"
+    },
+    {
+      "name": "detects an unreachable credential blob without printing its contents",
+      "status": "passed"
+    },
+    {
+      "name": "checks exact stdin secrets in staged and untracked files without storing the input",
+      "status": "passed"
+    },
+    {
+      "name": "bounded BFS shares extraction cache and respects robots exclusions",
+      "status": "passed"
+    },
+    {
+      "name": "research persists citation evidence and can be read from another manager",
+      "status": "passed"
+    },
+    {
+      "name": "code context keeps tagged code and version provenance",
+      "status": "passed"
+    },
+    {
+      "name": "research reports zero matches explicitly without invented citations",
+      "status": "passed"
+    },
+    {
+      "name": "research views bound bodies and retain stable citation IDs across pages",
+      "status": "passed"
+    },
+    {
+      "name": "Map refuses private seed addresses even with max_depth=0",
+      "status": "passed"
+    }
+  ]
+}

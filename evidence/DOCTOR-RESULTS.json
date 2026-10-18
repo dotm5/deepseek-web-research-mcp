@@ -1,0 +1,65 @@
+{
+  "version": "0.4.0",
+  "node": "v24.13.1",
+  "credentials": {
+    "configured": true,
+    "backend": "windows-dpapi",
+    "mask": "[redacted]"
+  },
+  "api": {
+    "ok": true,
+    "elapsed_ms": 838,
+    "api_requests": 1,
+    "cache_hits": 0,
+    "coalesced_hits": 0,
+    "failures": 0,
+    "local_requests": 0,
+    "request_budget": 1
+  },
+  "network": {
+    "proxy": "http://127.0.0.1:7897",
+    "dns": "auto"
+  },
+  "harnesses": [
+    {
+      "name": "claude",
+      "detected": true,
+      "registered": true,
+      "keyless": true,
+      "current": true,
+      "config": "<home>\\.claude.json"
+    },
+    {
+      "name": "codex",
+      "detected": true,
+      "registered": true,
+      "keyless": true,
+      "current": true,
+      "config": "<home>\\.codex\\config.toml"
+    },
+    {
+      "name": "cursor",
+      "detected": false,
+      "registered": false,
+      "keyless": false,
+      "current": false,
+      "config": "<home>\\.cursor\\mcp.json"
+    },
+    {
+      "name": "windsurf",
+      "detected": false,
+      "registered": false,
+      "keyless": false,
+      "current": false,
+      "config": "<home>\\.codeium\\windsurf\\mcp_config.json"
+    },
+    {
+      "name": "gemini",
+      "detected": true,
+      "registered": false,
+      "keyless": false,
+      "current": false,
+      "config": "<home>\\.gemini\\settings.json"
+    }
+  ]
+}

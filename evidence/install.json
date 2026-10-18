@@ -1,0 +1,75 @@
+{
+  "version": "0.4.1",
+  "platform": "win32",
+  "node": "v24.13.1",
+  "live": false,
+  "api_requests": 0,
+  "cli_sha256": "1efbe4f7d5c56046b42dcde815aac730d15b7cd8efe002eab99dd71f592bf396",
+  "package_audit": {
+    "version": "0.4.1",
+    "name": "deepseek-web-research-mcp",
+    "files": [
+      "LICENSE",
+      "dist/cli.js",
+      "npm-shrinkwrap.json",
+      "package.json",
+      "CHANGELOG.md",
+      "README.en.md",
+      "README.md"
+    ],
+    "runtime_install_scripts": false,
+    "local_path_dependencies": false,
+    "embedded_credentials": false
+  },
+  "checks": [
+    {
+      "name": "npx installed the expected package version",
+      "passed": true
+    },
+    {
+      "name": "fresh profile has no credential",
+      "passed": true
+    },
+    {
+      "name": "empty stdin and key-in-argv login are rejected",
+      "passed": true
+    },
+    {
+      "name": "setup dry-run detects isolated Claude and Codex",
+      "passed": true
+    },
+    {
+      "name": "setup uses both native CLI management interfaces",
+      "passed": true
+    },
+    {
+      "name": "managed runtime is outside npx cache",
+      "passed": true
+    },
+    {
+      "name": "setup preserves unrelated Claude settings",
+      "passed": true
+    },
+    {
+      "name": "registration contains only command and args",
+      "passed": true
+    },
+    {
+      "name": "doctor verifies both keyless current registrations",
+      "passed": true
+    },
+    {
+      "name": "repeat setup succeeds",
+      "passed": true
+    },
+    {
+      "name": "managed MCP survives deletion of npx cache and tarball",
+      "passed": true
+    },
+    {
+      "name": "missing key error guides to correct npm package",
+      "passed": true
+    }
+  ],
+  "scope": "Real npm exec/npx install and managed MCP process; isolated stub Agent management CLIs. Live mode adds two real API calls and OS-vault login/logout. No existing user configuration is changed."
+}

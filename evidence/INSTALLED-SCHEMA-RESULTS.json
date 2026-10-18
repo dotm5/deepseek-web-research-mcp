@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-10-18T14:27:02.901Z",
+  "node": "<node>",
+  "entry": "<data-dir>\\runtime\\node_modules\\deepseek-search-mcp\\dist\\cli.js",
+  "live": false,
+  "server_versions": [
+    {
+      "name": "deepseek-search-mcp",
+      "version": "0.4.1"
+    },
+    {
+      "name": "deepseek-search-mcp",
+      "version": "0.4.1"
+    }
+  ],
+  "schemas": [
+    {
+      "name": "deepseek_search",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_fetch",
+      "valid": true,
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "name": "deepseek_extract",
+      "valid": true,
+      "required": [
+        "urls"
+      ]
+    },
+    {
+      "name": "deepseek_search_advanced",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_map",
+      "valid": true,
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "name": "deepseek_crawl",
+      "valid": true,
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "name": "deepseek_code_context",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_research_start",
+      "valid": true,
+      "required": [
+        "query"
+      ]
+    },
+    {
+      "name": "deepseek_research_status",
+      "valid": true,
+      "required": [
+        "id"
+      ]
+    },
+    {
+      "name": "deepseek_research_cancel",
+      "valid": true,
+      "required": [
+        "id"
+      ]
+    }
+  ],
+  "calls": [],
+  "api_requests": 0,
+  "default_tools": [
+    "deepseek_search",
+    "deepseek_fetch",
+    "deepseek_extract"
+  ],
+  "invalid_arguments_rejected": true
+}

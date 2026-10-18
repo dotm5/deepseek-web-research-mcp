@@ -1,0 +1,338 @@
+{
+  "timestamp": "2026-10-18T14:04:55.290Z",
+  "mode": "socks",
+  "proxy": "socks5://127.0.0.1:7897",
+  "model": "deepseek-v4.1-flash[1M]",
+  "entry": "<data-dir>\\runtime\\node_modules\\deepseek-search-mcp\\dist\\cli.js",
+  "exit_code": 0,
+  "completed": true,
+  "checks": [
+    {
+      "name": "Map discovers beyond seed",
+      "passed": true
+    },
+    {
+      "name": "Crawl extracts two non-empty sources",
+      "passed": true
+    },
+    {
+      "name": "deepseek_map records actual pinned requests",
+      "passed": true
+    },
+    {
+      "name": "deepseek_crawl records actual pinned requests",
+      "passed": true
+    },
+    {
+      "name": "Private seed blocked",
+      "passed": true
+    }
+  ],
+  "calls": [
+    {
+      "id": "call_00_sMKDI5xeR2ZGoMBOdKMp2767",
+      "name": "deepseek_map",
+      "arguments": {
+        "url": "https://modelcontextprotocol.io/",
+        "max_depth": 1,
+        "limit": 4,
+        "request_budget": 3,
+        "max_duration_seconds": 30,
+        "allow_external": false
+      },
+      "isError": false,
+      "bytes": 549,
+      "result": {
+        "results": [
+          {
+            "url": "https://modelcontextprotocol.io/",
+            "depth": 0,
+            "source": "seed"
+          },
+          {
+            "url": "https://modelcontextprotocol.io/examples",
+            "depth": 1,
+            "source": "discovery"
+          },
+          {
+            "url": "https://modelcontextprotocol.io/seps",
+            "depth": 1,
+            "source": "discovery"
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 1916,
+          "api_requests": 0,
+          "cache_hits": 1,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 2,
+          "request_budget": 3,
+          "queued_urls": 3,
+          "robots_checked": true,
+          "network": {
+            "proxy": "socks5://127.0.0.1:7897",
+            "dns": "auto",
+            "doh_queries": 2,
+            "pinned_requests": 2,
+            "public_ip_pinning": true
+          }
+        }
+      }
+    },
+    {
+      "id": "call_00_9hvE5tB3e7cKHroYngX03721",
+      "name": "deepseek_crawl",
+      "arguments": {
+        "allow_external": false,
+        "max_depth": 1,
+        "max_duration_seconds": 30,
+        "max_pages": 2,
+        "request_budget": 4,
+        "url": "https://modelcontextprotocol.io/"
+      },
+      "isError": false,
+      "bytes": 13382,
+      "result": {
+        "results": [
+          {
+            "title": "What is the Model Context Protocol (MCP)? - Model Context Protocol",
+            "url": "https://modelcontextprotocol.io/",
+            "snippet": "",
+            "summary": "",
+            "content": "## Documentation Index\n\nFetch the complete documentation index at\\: \\/llms.txt\n\n## Documentation Index\n\nUse this file to discover all available pages before exploring further.\n\n## Documentation Index\n\nSkip to main content\n\n## Documentation Index\n\nGet started\n\n# What is the Model Context Protocol (MCP)\\?\n\nMCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems. Using MCP\\, AI applications like Claude or ChatGPT can connect to data sources (e.g. local files\\, databases)\\, tools (e.g. search engines\\, calculators) and workflows (e.g. specialized prompts)—enabling them to access key information and perform tasks. Think of MCP like a USB-C port for AI applications. Just as USB-C provides a standardized way to connect electronic devices\\, MCP provides a standardized way to connect AI applications to external systems.\n\n## What can MCP enable\\?\n\n- Agents can access your Google Calendar and Notion\\, acting as a more personalized AI assistant.\n- Claude Code can generate an entire web app using a Figma design.\n- Enterprise chatbots can connect to multiple databases across an organization\\, empowering users to analyze data using chat.\n- AI models can create 3D designs on Blender and print them out using a 3D printer.\n\n## Why does MCP matter\\?\n\nDepending on where you sit in the ecosystem\\, MCP can have a range of benefits.\n- Developers\\: MCP reduces development time and complexity when building\\, or integrating with\\, an AI application or agent.\n- AI applications or agents\\: MCP gives them access to an ecosystem of data sources\\, tools and apps\\, which enhances their capabilities and improves the end-user experience.\n- End-users\\: MCP results in more capable AI applications or agents that can access user data and take actions on the user’s behalf when necessary.\n\n## Broad ecosystem support\n\nMCP is an open protocol supported across a wide range of clients and servers. AI assistants like Claude and ChatGPT\\, development tools like Visual Studio Code\\, Cursor\\, MCPJam\\, and many others all support MCP — making it easy to build once and integrate everywhere.\n\n## Community\n\nWas this page helpful\\?\n\n## Community\n\nAssistant\n\n## Community\n\nResponses are generated using AI and may contain mistakes.",
+            "provider_score": null,
+            "rerank_score": null,
+            "authority": null,
+            "published_at": null,
+            "date": null,
+            "fetched_at": "2026-10-18T13:52:14.806Z",
+            "truncated": false,
+            "original_length": 2258,
+            "source_queries": [],
+            "chunks": [
+              {
+                "content": "## Documentation Index\n\nFetch the complete documentation index at\\: \\/llms.txt",
+                "score": 0,
+                "index": 0
+              },
+              {
+                "content": "## Documentation Index\n\nUse this file to discover all available pages before exploring further.",
+                "score": 0,
+                "index": 1
+              },
+              {
+                "content": "## Documentation Index\n\nSkip to main content",
+                "score": 0,
+                "index": 2
+              },
+              {
+                "content": "## Documentation Index\n\nGet started",
+                "score": 0,
+                "index": 3
+              },
+              {
+                "content": "# What is the Model Context Protocol (MCP)\\?\n\nMCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems. Using MCP\\, AI applications like Claude or ChatGPT can connect to data sources (e.g. local files\\, databases)\\, tools (e.g. search engines\\, calculators) and workflows (e.g. specialized prompts)—enabling them to access key information and perform tasks. Think of MCP like a USB-C port for AI applications. Just as USB-C provides a standardized way to connect electronic devices\\, MCP provides a standardized way to connect AI applications to external systems.",
+                "score": 0,
+                "index": 4
+              },
+              {
+                "content": "## What can MCP enable\\?\n\n- Agents can access your Google Calendar and Notion\\, acting as a more personalized AI assistant.\n- Claude Code can generate an entire web app using a Figma design.\n- Enterprise chatbots can connect to multiple databases across an organization\\, empowering users to analyze data using chat.\n- AI models can create 3D designs on Blender and print them out using a 3D printer.",
+                "score": 0,
+                "index": 5
+              },
+              {
+                "content": "## Why does MCP matter\\?\n\nDepending on where you sit in the ecosystem\\, MCP can have a range of benefits.\n- Developers\\: MCP reduces development time and complexity when building\\, or integrating with\\, an AI application or agent.\n- AI applications or agents\\: MCP gives them access to an ecosystem of data sources\\, tools and apps\\, which enhances their capabilities and improves the end-user experience.\n- End-users\\: MCP results in more capable AI applications or agents that can access user data and take actions on the user’s behalf when necessary.",
+                "score": 0,
+                "index": 6
+              },
+              {
+                "content": "## Broad ecosystem support\n\nMCP is an open protocol supported across a wide range of clients and servers. AI assistants like Claude and ChatGPT\\, development tools like Visual Studio Code\\, Cursor\\, MCPJam\\, and many others all support MCP — making it easy to build once and integrate everywhere.",
+                "score": 0,
+                "index": 7
+              },
+              {
+                "content": "## Community\n\nWas this page helpful\\?",
+                "score": 0,
+                "index": 8
+              },
+              {
+                "content": "## Community\n\nAssistant",
+                "score": 0,
+                "index": 9
+              },
+              {
+                "content": "## Community\n\nResponses are generated using AI and may contain mistakes.",
+                "score": 0,
+                "index": 10
+              }
+            ]
+          },
+          {
+            "title": "Example Servers - Model Context Protocol",
+            "url": "https://modelcontextprotocol.io/examples",
+            "snippet": "",
+            "summary": "",
+            "content": "## Documentation Index\n\nFetch the complete documentation index at\\: \\/llms.txt\n\n## Documentation Index\n\nUse this file to discover all available pages before exploring further.\n\n## Documentation Index\n\nSkip to main content\n\n## Documentation Index\n\nExamples\n\n# Example Servers\n\nA list of example servers and implementations\n\n# Example Servers\n\nThis page showcases various Model Context Protocol (MCP) servers that demonstrate the protocol’s capabilities and versatility. These servers enable Large Language Models (LLMs) to securely access tools and data sources.\n\n## Reference implementations\n\nThese official reference servers demonstrate core MCP features and SDK usage\\:\n\n### Current reference servers\n\n- Everything - Reference \\/ test server with prompts\\, resources\\, and tools\n- Fetch - Web content fetching and conversion for efficient LLM usage\n- Filesystem - Secure file operations with configurable access controls\n- Git - Tools to read\\, search\\, and manipulate Git repositories\n- Memory - Knowledge graph-based persistent memory system\n- Sequential Thinking - Dynamic and reflective problem-solving through thought sequences\n- Time - Time and timezone conversion capabilities\n\n### Additional example servers (archived)\n\nVisit the servers-archived repository to get access to archived example servers that are no longer actively maintained. They are provided for historical reference only.\n\n## Official integrations\n\nVisit the MCP Servers Repository (Official Integrations section) for a list of MCP servers maintained by companies for their platforms.\n\n## Community implementations\n\nVisit the MCP Servers Repository (Community section) for a list of MCP servers maintained by community members.\n\n### Using reference servers\n\nTypeScript-based servers can be used directly with npx\\:\n\n### Using reference servers\n\nPython-based servers can be used with\nnpx -y \\@modelcontextprotocol\\/server-memory\nuvx (recommended) or pip\\:\n\n# Using uvx\n\nuvx mcp-server-git\n\n# Using pip\n\npip install mcp-server-git\npython -m mcp_server_git\n\n### Configuring with Claude\n\nTo use an MCP server with Claude\\, add it to your configuration\\:{\n  \\\"mcpServers\\\"\\: {\n    \\\"memory\\\"\\: {\n      \\\"command\\\"\\: \\\"npx\\\"\\,\n      \\\"args\\\"\\: [\\\"-y\\\"\\, \\\"\\@modelcontextprotocol\\/server-memory\\\"]\n    }\\,\n    \\\"filesystem\\\"\\: {\n      \\\"command\\\"\\: \\\"npx\\\"\\,\n      \\\"args\\\"\\: [\n        \\\"-y\\\"\\,\n        \\\"\\@modelcontextprotocol\\/server-filesystem\\\"\\,\n        \\\"\\/path\\/to\\/allowed\\/files\\\"\n      ]\n    }\\,\n    \\\"github\\\"\\: {\n      \\\"command\\\"\\: \\\"npx\\\"\\,\n      \\\"args\\\"\\: [\\\"-y\\\"\\, \\\"\\@modelcontextprotocol\\/server-github\\\"]\\,\n      \\\"env\\\"\\: {\n        \\\"GITHUB_PERSONAL_ACCESS_TOKEN\\\"\\: \\\"\\<YOUR_TOKEN>\\\"\n      }\n    }\n  }\n}\n\n## Additional resources\n\nVisit the MCP Servers Repository (Resources section) for a collection of other resources and projects related to MCP. Visit our GitHub Discussions to engage with the MCP community.\nWas this page helpful\\?\n\n## Additional resources\n\nAssistant\n\n## Additional resources\n\nResponses are generated using AI and may contain mistakes.",
+            "provider_score": null,
+            "rerank_score": null,
+            "authority": null,
+            "published_at": null,
+            "date": null,
+            "fetched_at": "2026-10-18T13:52:23.325Z",
+            "truncated": false,
+            "original_length": 2996,
+            "source_queries": [],
+            "chunks": [
+              {
+                "content": "## Documentation Index\n\nFetch the complete documentation index at\\: \\/llms.txt",
+                "score": 0,
+                "index": 0
+              },
+              {
+                "content": "## Documentation Index\n\nUse this file to discover all available pages before exploring further.",
+                "score": 0,
+                "index": 1
+              },
+              {
+                "content": "## Documentation Index\n\nSkip to main content",
+                "score": 0,
+                "index": 2
+              },
+              {
+                "content": "## Documentation Index\n\nExamples",
+                "score": 0,
+                "index": 3
+              },
+              {
+                "content": "# Example Servers\n\nA list of example servers and implementations",
+                "score": 0,
+                "index": 4
+              },
+              {
+                "content": "# Example Servers\n\nThis page showcases various Model Context Protocol (MCP) servers that demonstrate the protocol’s capabilities and versatility. These servers enable Large Language Models (LLMs) to securely access tools and data sources.",
+                "score": 0,
+                "index": 5
+              },
+              {
+                "content": "## Reference implementations\n\nThese official reference servers demonstrate core MCP features and SDK usage\\:",
+                "score": 0,
+                "index": 6
+              },
+              {
+                "content": "### Current reference servers\n\n- Everything - Reference \\/ test server with prompts\\, resources\\, and tools\n- Fetch - Web content fetching and conversion for efficient LLM usage\n- Filesystem - Secure file operations with configurable access controls\n- Git - Tools to read\\, search\\, and manipulate Git repositories\n- Memory - Knowledge graph-based persistent memory system\n- Sequential Thinking - Dynamic and reflective problem-solving through thought sequences\n- Time - Time and timezone conversion capabilities",
+                "score": 0,
+                "index": 7
+              },
+              {
+                "content": "### Additional example servers (archived)\n\nVisit the servers-archived repository to get access to archived example servers that are no longer actively maintained. They are provided for historical reference only.",
+                "score": 0,
+                "index": 8
+              },
+              {
+                "content": "## Official integrations\n\nVisit the MCP Servers Repository (Official Integrations section) for a list of MCP servers maintained by companies for their platforms.",
+                "score": 0,
+                "index": 9
+              },
+              {
+                "content": "## Community implementations\n\nVisit the MCP Servers Repository (Community section) for a list of MCP servers maintained by community members.",
+                "score": 0,
+                "index": 10
+              },
+              {
+                "content": "### Using reference servers\n\nTypeScript-based servers can be used directly with npx\\:",
+                "score": 0,
+                "index": 11
+              },
+              {
+                "content": "### Using reference servers\n\nPython-based servers can be used with\nnpx -y \\@modelcontextprotocol\\/server-memory\nuvx (recommended) or pip\\:",
+                "score": 0,
+                "index": 12
+              },
+              {
+                "content": "# Using uvx\n\nuvx mcp-server-git",
+                "score": 0,
+                "index": 13
+              },
+              {
+                "content": "# Using pip\n\npip install mcp-server-git\npython -m mcp_server_git",
+                "score": 0,
+                "index": 14
+              },
+              {
+                "content": "### Configuring with Claude\n\nTo use an MCP server with Claude\\, add it to your configuration\\:{\n  \\\"mcpServers\\\"\\: {\n    \\\"memory\\\"\\: {\n      \\\"command\\\"\\: \\\"npx\\\"\\,\n      \\\"args\\\"\\: [\\\"-y\\\"\\, \\\"\\@modelcontextprotocol\\/server-memory\\\"]\n    }\\,\n    \\\"filesystem\\\"\\: {\n      \\\"command\\\"\\: \\\"npx\\\"\\,\n      \\\"args\\\"\\: [\n        \\\"-y\\\"\\,\n        \\\"\\@modelcontextprotocol\\/server-filesystem\\\"\\,\n        \\\"\\/path\\/to\\/allowed\\/files\\\"\n      ]\n    }\\,\n    \\\"github\\\"\\: {\n      \\\"command\\\"\\: \\\"npx\\\"\\,\n      \\\"args\\\"\\: [\\\"-y\\\"\\, \\\"\\@modelcontextprotocol\\/server-github\\\"]\\,\n      \\\"env\\\"\\: {\n        \\\"GITHUB_PERSONAL_ACCESS_TOKEN\\\"\\: \\\"\\<YOUR_TOKEN>\\\"\n      }\n    }\n  }\n}",
+                "score": 0,
+                "index": 15
+              },
+              {
+                "content": "## Additional resources\n\nVisit the MCP Servers Repository (Resources section) for a collection of other resources and projects related to MCP. Visit our GitHub Discussions to engage with the MCP community.\nWas this page helpful\\?",
+                "score": 0,
+                "index": 16
+              },
+              {
+                "content": "## Additional resources\n\nAssistant",
+                "score": 0,
+                "index": 17
+              },
+              {
+                "content": "## Additional resources\n\nResponses are generated using AI and may contain mistakes.",
+                "score": 0,
+                "index": 18
+              }
+            ]
+          }
+        ],
+        "failed_results": [],
+        "meta": {
+          "elapsed_ms": 1396,
+          "api_requests": 0,
+          "cache_hits": 3,
+          "coalesced_hits": 0,
+          "failures": 0,
+          "local_requests": 2,
+          "request_budget": 4,
+          "network": {
+            "proxy": "socks5://127.0.0.1:7897",
+            "dns": "auto",
+            "doh_queries": 0,
+            "pinned_requests": 2,
+            "public_ip_pinning": true
+          }
+        },
+        "discovered": [
+          {
+            "url": "https://modelcontextprotocol.io/",
+            "depth": 0,
+            "source": "seed"
+          },
+          {
+            "url": "https://modelcontextprotocol.io/examples",
+            "depth": 1,
+            "source": "discovery"
+          }
+        ]
+      }
+    },
+    {
+      "id": "call_00_zJoGakkcW0sVDqFdQyC27235",
+      "name": "deepseek_map",
+      "arguments": {
+        "max_depth": 0,
+        "limit": 1,
+        "request_budget": 1,
+        "url": "http://127.0.0.1/"
+      },
+      "isError": true,
+      "bytes": 93,
+      "result": {
+        "error": {
+          "code": "SSRF_BLOCKED",
+          "message": "Destination IP must be public",
+          "retryable": false
+        }
+      }
+    }
+  ],
+  "model_report": "All three cases executed once each, sequentially, via DeepSeek MCP only. No other tools were called.\n\n## Case 1 — `deepseek_map` (https://modelcontextprotocol.io/)\n\n**Discovery: PASS (more than seed).** 3 URLs returned:\n\n| URL | depth | source |\n|---|---|---|\n| https://modelcontextprotocol.io/ | 0 | seed |\n| https://modelcontextprotocol.io/examples | 1 | discovery |\n| https://modelcontextprotocol.io/seps | 1 | discovery |\n\n- `failed_results`: `[]`\n- Body lengths: N/A — map returns URL metadata only, no body content.\n- Counters: `elapsed_ms=1916`, `api_requests=0`, `cache_hits=1`, `coalesced_hits=0`, `failures=0`, `local_requests=2`, `request_budget=3`, `queued_urls=3`, `robots_checked=true`\n- Network: `proxy=socks5://127.0.0.1:7897`, `dns=auto`, `doh_queries=2`, `pinned_requests=2`, `public_ip_pinning=true`\n\n**Fresh vs. cache:** zero API requests; discovery came from 1 cache hit plus 2 local (pinned) requests. The `127.0.0.1` value is the local egress proxy metadata, not a fetched private URL.\n\n## Case 2 — `deepseek_crawl` (max_pages=2)\n\n**Discovery: PASS (more than seed).** 2 pages fetched, 1 discovered beyond seed:\n\n| URL | body length | truncated | fetched_at |\n|---|---|---|---|\n| https://modelcontextprotocol.io/ (seed) | 2258 | false | 2026-10-18T13:52:14.806Z |\n| https://modelcontextprotocol.io/examples | 2996 | false | 2026-10-18T13:52:23.325Z |\n\n- `discovered`: seed (depth 0) + `/examples` (depth 1, discovery). Note `/seps` seen by map was not re-listed here.\n- `failed_results`: `[]`\n- Counters: `elapsed_ms=1396`, `api_requests=0`, `cache_hits=3`, `coalesced_hits=0`, `failures=0`, `local_requests=2`, `request_budget=4`\n- Network: `proxy=socks5://127.0.0.1:7897`, `dns=auto`, `doh_queries=0`, `pinned_requests=2`, `public_ip_pinning=true`\n\n**Fresh vs. cache:** all content was served without fresh API calls (`api_requests=0`, `cache_hits=3` — both page bodies plus ancillary lookup). `max_pages=2` and `request_budget=4` respected. Page content was treated as untrusted display data only.\n\n## Case 3 — `deepseek_map` (http://127.0.0.1/) — negative SSRF\n\n**PASS — blocked pre-flight.**\n\n```json\n{\"error\":{\"code\":\"SSRF_BLOCKED\",\"message\":\"Destination IP must be public\",\"retryable\":false}}\n```\n\n- No `results` array; no seed URL or any private URL discovered.\n- No `meta`/network block emitted: no `api_requests`, `local_requests`, `cache_hits`, `doh_queries`, or `pinned_requests` counters — consistent with rejection before any outbound resolution or dispatch. No evidence of a network attempt.\n- `retryable=false`.\n\n## Summary\n\n| Case | Outcome | Discovered > seed | API requests | Cache hits | Local req | Failures |\n|---|---|---|---|---|---|---|\n| map `/` | pass | yes (2) | 0 | 1 | 2 | 0 |\n| crawl `/` | pass | yes (1) | 0 | 3 | 2 | 0 |\n| map `127.0.0.1` | SSRF_BLOCKED | n/a (0) | none reported | none reported | none reported | n/a |\n\nNo fresh API calls occurred in cases 1–2; all results were cache/local-pinned. Case 3 produced no private URL and no network metadata, indicating a clean pre-flight SSRF rejection."
+}
