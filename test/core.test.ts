@@ -29,7 +29,7 @@ describe('credential isolation', () => {
     const dir = await mkdtemp(path.join(tmpdir(), 'dsmcp-dpapi-'));
     try { const vault = new CredentialVault(dir); await vault.set(fakeKey); expect((await vault.status()).backend).toBe('windows-dpapi'); expect(await vault.get()).toBe(fakeKey); expect(await readFile(path.join(dir, 'credentials.dpapi'), 'utf8')).not.toContain(fakeKey); await vault.logout(); expect(await vault.get()).toBeUndefined(); }
     finally { await rm(dir, { recursive: true, force: true }); }
-  });
+  }, 30000); // Multiple real PowerShell launches exceed Vitest's 5s default on cold hosted runners.
 });
 describe('query planning and normalization', () => {
   it('splits long Unicode queries with native operators and reports budget omissions', () => { const plan = planQueries({ query: '中文'.repeat(100), include_domains: ['github.com', 'nodejs.org'], start_date: '2025-01-01', end_date: '2026-10-18' }, 3); expect(plan.queries.length).toBe(3); expect(plan.omitted_queries.length).toBeGreaterThan(0); for (const q of [...plan.queries, ...plan.omitted_queries]) { expect(cpLength(q)).toBeLessThanOrEqual(128); expect(q).toContain('after:2025-01-01'); } });
